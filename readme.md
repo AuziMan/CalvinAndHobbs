@@ -16,4 +16,4 @@ This application requires the `pymongo` and `pymongo[srv]` modules to connect to
 
 Thanks to Bill Watterson for creating Calvin and Hobbes, and thanks to OpenAI for creating GPT-3, which was used to generate some of the quotes in the database.
 
-![Calvin and Hobbes](LetsGoExploring.jpg)
+![Calvin and Hobbes](media/LetsGoExploring.jpg)
