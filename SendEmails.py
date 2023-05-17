@@ -11,15 +11,15 @@ context = ssl.create_default_context()
 
 email_sender = emailUser
 email_password = emailPW
-email_reciever = 'austintdriver@gmail.com'
+email_reciever = 'austintdriver@gmail.com', 'tom.driver@gmail.com'
 
 #get documents from mongo
 quotes = main.returnRandomQuote()
 
 print (quotes)
 
-subject = 'Hello from python'
-body = quotes
+subject = 'Daily Calvin and Hobbs Quote and comic!'
+body = 'Quote of the day:    ' + quotes
 
 
 
@@ -29,6 +29,14 @@ msg['To'] = email_reciever
 msg['Subject'] = subject
 msg.set_content(body, charset='utf-8')
 
+image_path = 'media/19950102.jpg'
+with open(image_path, 'rb') as file:
+    image_data = file.read()
+
+image_filename = os.path.basename(image_path)
+
+
+msg.add_attachment(image_data, maintype='image', subtype='jpg', filename = image_filename )
 
 
 with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
