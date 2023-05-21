@@ -22,8 +22,11 @@ def sendEmail(recipients):
     msg['Subject'] = subject
     msg.set_content(body, charset='utf-8')
 
+    # Retrieve the comic image from MongoDB
+    image_file_id = mongoOps.retrieveImage()
+
     # Add the comic image as an attachment
-    image_path = 'media/19950102.jpg'
+    image_path = 'media/tempImages/' + image_file_id  # Adjust the image path as needed
     with open(image_path, 'rb') as file:
         image_data = file.read()
     image_filename = os.path.basename(image_path)
