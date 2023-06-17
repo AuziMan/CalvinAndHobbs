@@ -1,5 +1,6 @@
+import json
 import config
-from bson import ObjectId
+from bson import json_util
 import os
 
 import random
@@ -88,9 +89,15 @@ def insertQuotes(quote):
 # Print all quotes from the database
 def findAllQuotes():
     collection = quotes_db.listOfQuotes
-    foundQuotes = collection.find()
+    foundQuotes = collection.find({}, {"_id": 0})
+    quotes_list = []
+
     for docs in foundQuotes:
-        print(docs)
+        quote = next(iter(docs.values()))
+
+        quotes_list.append(quote)
+
+    return quotes_list   
 
 
 # returns the quote based on the ID of the quote. 

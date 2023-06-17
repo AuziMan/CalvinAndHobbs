@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "64604ca357f6bc18d9bb573d"
+  },
+  "quote1": "It’s a magical world, Hobbes, ol’ buddy... Let’s go exploring!"
+},{
+  "_id": {
+    "$oid": "64604cda57f6bc18d9bb573f"
+  },
+  "quote2": "Sometimes I think the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us."
+},{
+  "_id": {
+    "$oid": "64605154275bad2154c37fda"
+  },
+  "quote3": "People think it must be fun to be a super genius, but they don’t realize how hard it is to put up with all the idiots in the world."
+},{
+  "_id": {
+    "$oid": "64613eb2f4eb24483ef37431"
+  },
+  "quote12": "I think night time is dark so you can imagine your fears with less distraction."
+}]

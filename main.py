@@ -1,7 +1,10 @@
 import mongoOps
 import SendEmails 
 
-email_recipients = ['austintdriver@gmail.com']
+emailNames = ['']
+
+
+email_recipients = emailNames
 contentOfQuote = "this is a test. Delete mex2"
 folder_path = 'comics/1995/12'  # Replace with the actual folder path containing the images
 
